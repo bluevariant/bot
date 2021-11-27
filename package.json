@@ -1,7 +1,17 @@
 {
   "devDependencies": {
     "@types/node": "^16.11.10",
+    "lerna": "^4.0.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
+  },
+  "name": "bot",
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "add-workspace": "npx lerna create @bluevariant/packageName"
   }
 }
