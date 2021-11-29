@@ -16,6 +16,8 @@ const domains = [
   "::1",
   "bablosoft.com",
   "*.bablosoft.com",
+  "expresshttps.com",
+  "*.expresshttps.com",
 ]
   .map((v) => `"${v}"`)
   .join(" ");
