@@ -21,6 +21,7 @@
     "lodash": "^4.17.21"
   },
   "scripts": {
-    "start-crack-services": "ts-node packages/crack-services/app.ts"
+    "start-crack-services": "ts-node packages/crack-services/app.ts",
+    "gen-cert": "ts-node packages/crack-services/gen-cert.ts"
   }
 }

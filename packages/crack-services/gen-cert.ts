@@ -22,7 +22,9 @@ const domains = [
   .map((v) => `"${v}"`)
   .join(" ");
 
-const installCert = execSync(`mkcert ${domains}`).toString();
+const installCert = execSync(`mkcert ${domains}`, {
+  cwd: __dirname,
+}).toString();
 
 console.log(installCert);
 
