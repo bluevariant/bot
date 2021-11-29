@@ -56,13 +56,14 @@ async function app() {
     res.json(data);
   });
   app.post("//scripts/TB401/last/data", upload.none(), async (req, res) => {
+    const reqBody = JSON.parse(JSON.stringify(req.body));
     const form = new FormData();
 
-    _.forEach(req.body, (v, k) => {
+    _.forEach(reqBody, (v, k) => {
       form.append(k, v);
     });
 
-    console.log("req.body", req.body);
+    console.log("req.body", reqBody);
 
     const { data } = await axios.post(
       "http://51.38.126.82/scripts/TB401/last/data",
