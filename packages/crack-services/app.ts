@@ -5,6 +5,7 @@ require("./gen-cert");
 import { readFileSync } from "fs";
 import express = require("express");
 import https = require("https");
+import bodyParser = require("body-parser");
 
 async function app() {
   const credentials = {
@@ -15,8 +16,14 @@ async function app() {
   const app = express();
   const httpsServer = https.createServer(credentials, app);
 
+  app.use(bodyParser.json());
+  app.use(
+    bodyParser.urlencoded({
+      extended: true,
+    })
+  );
   app.use((req, res, next) => {
-    console.log(req.headers, req.path);
+    console.log(req.headers, req.method, req.path);
 
     next();
   });
