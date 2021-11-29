@@ -19,5 +19,8 @@
   "dependencies": {
     "fs-extra": "^10.0.0",
     "lodash": "^4.17.21"
+  },
+  "scripts": {
+    "start-crack-services": "ts-node packages/crack-services/app.ts"
   }
 }
