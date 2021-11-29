@@ -1,9 +1,9 @@
 ```shell
-npx lerna create @projectName/packagename
+npx lerna create @bluevariant/packagename
 ```
 ```shell
-yarn workspace @projectName/yourpackagename add npm-package-name
+yarn workspace @bluevariant/yourpackagename add npm-package-name
 ```
 ```shell
-yarn add -W --dev typescript prettier eslint
+yarn add -W --dev typescript prettier ts-node @types/node
 ```
