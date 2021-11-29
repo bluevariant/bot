@@ -36,7 +36,6 @@ async function app() {
         headers: {
           ...(req.headers as any),
           host: "bablosoft.com",
-          "content-type": "multipart/form-data",
         },
       }
     );
