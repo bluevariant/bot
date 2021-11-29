@@ -15,8 +15,10 @@ async function app() {
   const app = express();
   const httpsServer = https.createServer(credentials, app);
 
-  app.get("/", (req, res) => {
-    res.send("Hello World!");
+  app.use((req, res, next) => {
+    console.log(req.headers, req.path);
+
+    next();
   });
 
   httpsServer.listen(port, () => {
