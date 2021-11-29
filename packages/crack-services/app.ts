@@ -1,3 +1,4 @@
+require("./gen-cert");
 import express = require("express");
 
 async function app() {
