@@ -23,13 +23,25 @@ async function app() {
 
     next();
   });
-  app.get("/scripts/TB401/properties", (req, res) => {
-    res.json({
-      success: true,
-      free: false,
-      hash: "",
-      engversion: "24.3.1",
-    });
+  app.get("/scripts/TB401/properties", async (req, res) => {
+    // res.json({
+    //   success: true,
+    //   free: false,
+    //   hash: "",
+    //   engversion: "24.3.1",
+    // });
+    const { data } = await axios.get(
+      "http://51.38.126.82/scripts/TB401/properties",
+      {
+        headers: {
+          ...(req.headers as any),
+          host: "bablosoft.com",
+          "content-type": "multipart/form-data",
+        },
+      }
+    );
+
+    res.json(data);
   });
   app.get("//apps/TB401/logininterface", (req, res) => {
     res.json({
