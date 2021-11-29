@@ -18,5 +18,11 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@nestjs/common": "^8.2.3",
+    "@nestjs/core": "^8.2.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.4.0"
   }
 }
